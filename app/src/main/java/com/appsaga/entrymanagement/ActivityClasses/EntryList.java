@@ -10,6 +10,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -48,6 +49,8 @@ public class EntryList extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Visitors");
 
+        Log.d("Testing",databaseReference+"");
+
         entry_list = findViewById(R.id.entry_list);
 
         makeEntry = findViewById(R.id.make_entry);
@@ -60,7 +63,7 @@ public class EntryList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(EntryList.this, MainActivity.class));
+                startActivity(new Intent(EntryList.this, HostsList.class));
             }
         });
 

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityClasses.Form"
+    tools:context=".ActivityClasses.AddHost"
     android:background="#FFF">
 
     <TextView
         android:id="@+id/form_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please fill in your\ndetails"
+        android:text="Please fill in host\ndetails"
         android:gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
@@ -38,11 +38,11 @@
             android:layout_below="@id/form_text">
 
             <EditText
-                android:id="@+id/guest_name"
+                android:id="@+id/host_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:hint="Enter Your Name"
+                android:hint="Enter Host Name"
                 android:layout_marginTop="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -55,11 +55,11 @@
             android:layout_marginEnd="10dp">
 
             <EditText
-                android:id="@+id/guest_email"
+                android:id="@+id/host_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Enter Your Email"
+                android:hint="Enter Host Email"
                 android:layout_marginTop="10dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,22 +72,22 @@
             android:layout_marginEnd="10dp">
 
             <EditText
-                android:id="@+id/guest_phone"
+                android:id="@+id/host_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
-                android:hint="Enter Your Contact Number"
+                android:hint="Enter Host Contact Number"
                 android:layout_marginTop="10dp"
                 android:maxLength="13"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <Button
-        android:id="@+id/check_in"
+        android:id="@+id/add_host"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="Check In"
+        android:text="Add Host"
         android:background="@drawable/button_background"
         android:textColor="#FFF"/>
 

@@ -39,13 +39,13 @@ public class HostsAdapter extends ArrayAdapter<Hosts> {
         Hosts host = getItem(position);
 
         TextView name = hostsview.findViewById(R.id.name);
-        TextView post = hostsview.findViewById(R.id.post);
-        TextView department = hostsview.findViewById(R.id.department);
+        TextView email = hostsview.findViewById(R.id.email);
+        TextView phone = hostsview.findViewById(R.id.phone);
         TextView name_icon = hostsview.findViewById(R.id.name_icon);
 
         name.setText(host.getName());
-        post.setText(host.getPost());
-        department.setText(host.getDepartment());
+        email.setText(host.getEmail());
+        phone.setText(host.getPhone());
         name_icon.setText(host.getName().toUpperCase().charAt(0)+"");
 
         if(position%3==0)

@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "624384473962",
-    "firebase_url": "https://entrymanagement-d1d10.firebaseio.com",
-    "project_id": "entrymanagement-d1d10",
-    "storage_bucket": "entrymanagement-d1d10.appspot.com"
+    "project_number": "505063535183",
+    "firebase_url": "https://entry-management-38cc2.firebaseio.com",
+    "project_id": "entry-management-38cc2",
+    "storage_bucket": "entry-management-38cc2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:624384473962:android:2d0c3d5696c343498a0313",
+        "mobilesdk_app_id": "1:505063535183:android:139a2a958adb5e4fad703a",
         "android_client_info": {
           "package_name": "com.appsaga.entrymanagement"
         }
       },
       "oauth_client": [
         {
-          "client_id": "624384473962-2kfvsa3l1krt7s4na5tt3hhg41fbc5g7.apps.googleusercontent.com",
+          "client_id": "505063535183-o3kt7l44vtei9aerlitg85h54hu3id0t.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.appsaga.entrymanagement",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "624384473962-64f20nhb2tb8otgclfijqmdvelv9mnko.apps.googleusercontent.com",
+          "client_id": "505063535183-qtlrl3e7or60vife7hlolt9dte35rehu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBnVspSQVXPPDkr9YXExAUR0FuT_7YnjUw"
+          "current_key": "AIzaSyDglM_Sz85-BSFkEmWImQA1XjSq5EieGmM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "624384473962-64f20nhb2tb8otgclfijqmdvelv9mnko.apps.googleusercontent.com",
+              "client_id": "505063535183-qtlrl3e7or60vife7hlolt9dte35rehu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.appsaga.entrymanagement.Adapters.HostsAdapter;
 import com.appsaga.entrymanagement.Models.Hosts;
 import com.appsaga.entrymanagement.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,45 +22,52 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class HostsList extends AppCompatActivity {
 
     DatabaseReference databaseReference;
     ArrayList<Hosts> hosts;
     ListView hostsLists;
     ProgressDialog progressDialog;
     HostsAdapter hostsAdapter;
+    FloatingActionButton addHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_hosts_list);
+
+        addHost = findViewById(R.id.add_host_fb);
 
         hostsLists = findViewById(R.id.hosts_list);
-        progressDialog=new ProgressDialog(MainActivity.this);
+        progressDialog=new ProgressDialog(HostsList.this);
         progressDialog.setMessage("Loading");
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Hosts");
-        hosts=new ArrayList<>();
-
-        progressDialog.show();
-
-        fillListView();
 
         hostsLists.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Hosts host = hosts.get(position);
-                Intent intent = new Intent(MainActivity.this, HostDetails.class);
-                intent.putExtra("host_details",host);
+                Intent intent = new Intent(HostsList.this, Form.class);
+                intent.putExtra("host",host);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        addHost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(HostsList.this,AddHost.class));
             }
         });
     }
 
     private void fillListView()
     {
+        hosts=new ArrayList<>();
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -69,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     hosts.add(ds.getValue(Hosts.class));
                 }
 
-                hostsAdapter = new HostsAdapter(MainActivity.this,hosts);
+                hostsAdapter = new HostsAdapter(HostsList.this,hosts);
 
                 hostsLists.setAdapter(hostsAdapter);
 
@@ -81,5 +89,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        fillListView();
+        progressDialog.show();
     }
 }

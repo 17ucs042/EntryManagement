@@ -1,23 +1,17 @@
 package com.appsaga.entrymanagement.Models;
 
-import java.io.Serializable;
+        import java.io.Serializable;
 
 public class Hosts implements Serializable {
 
     String Name;
-    String Post;
     String Phone;
-    String Department;
-    String About;
     String Email;
 
-    public Hosts(String name, String post, String phone, String department, String about , String email) {
+    public Hosts(String name, String phone, String email) {
         Name = name;
-        Post = post;
         Phone = phone;
-        Department = department;
-        About = about;
-        Email=email;
+        Email = email;
     }
 
     public Hosts() {
@@ -39,14 +33,6 @@ public class Hosts implements Serializable {
         Name = name;
     }
 
-    public String getPost() {
-        return Post;
-    }
-
-    public void setPost(String post) {
-        Post = post;
-    }
-
     public String getPhone() {
         return Phone;
     }
@@ -55,19 +41,4 @@ public class Hosts implements Serializable {
         Phone = phone;
     }
 
-    public String getDepartment() {
-        return Department;
-    }
-
-    public void setDepartment(String department) {
-        Department = department;
-    }
-
-    public String getAbout() {
-        return About;
-    }
-
-    public void setAbout(String about) {
-        About = about;
-    }
 }
