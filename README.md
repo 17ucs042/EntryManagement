@@ -39,6 +39,8 @@ Entry Management is a software biuld to manage the entries made by visitors to m
 			|__ongoing
 			|__phone
 ```
+## Approach
+I have thought of this software as a simple entry management done at the gate entry. The current way to make entry is to write your and the host details in a register while making an entry and siging that entry with your signature. I have tried to bring the same process in an application on which the visitor can easily make an entry. 
 
 ## Application Flow
 - When you open the application a splash screen appears
