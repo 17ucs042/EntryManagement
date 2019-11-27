@@ -93,3 +93,5 @@ I have thought of this software as a simple entry management done at the gate en
 - Host IDs used are: 1) innov.testmail.1@gmail.com, Password: innovtest1
 									  2) innov.testmail.2@gmail.com, Password: innovtest
 - Visitor ID used is: visitor.testmail@gmail.com, Password: visitortest
+- Firebase Database Link: https://console.firebase.google.com/u/2/project/entry-management-38cc2/database/entry-management-38cc2/data
+Password for this is same as admin ID.
