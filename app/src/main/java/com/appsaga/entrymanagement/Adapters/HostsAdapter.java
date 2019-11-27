@@ -1,18 +1,19 @@
-package com.appsaga.entrymanagement;
+package com.appsaga.entrymanagement.Adapters;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.appsaga.entrymanagement.Models.Hosts;
+import com.appsaga.entrymanagement.R;
 
 import java.util.ArrayList;
 

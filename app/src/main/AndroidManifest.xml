@@ -13,13 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EntryList"></activity>
-        <activity android:name=".Checkout" />
-        <activity android:name=".Form" />
-        <activity android:name=".HostDetails" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".ActivityClasses.EntryList"></activity>
+        <activity android:name=".ActivityClasses.Checkout" />
+        <activity android:name=".ActivityClasses.Form" />
+        <activity android:name=".ActivityClasses.HostDetails" />
+        <activity android:name=".ActivityClasses.MainActivity" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".ActivityClasses.SplashScreen"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.appsaga.entrymanagement;
+package com.appsaga.entrymanagement.ActivityClasses;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.appsaga.entrymanagement.Models.Hosts;
+import com.appsaga.entrymanagement.Models.Visitors;
+import com.appsaga.entrymanagement.R;
+import com.appsaga.entrymanagement.Services.SendMail;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,26 +30,11 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Properties;
-
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Multipart;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
 
 public class Form extends AppCompatActivity {
 
     EditText name, email, phone;
-    String guest_name, guest_phone, guest_email,guest_check_in;
+    String guest_name, guest_phone, guest_email,guest_check_in,guest_check_in_date;
     Button checkIn;
     Hosts host;
     String message;
@@ -80,6 +69,9 @@ public class Form extends AppCompatActivity {
                 DateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
                 guest_check_in = dateFormat.format(date);
 
+                SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd-MMM-yyyy");
+                guest_check_in_date =dateFormat1.format(date);
+
                 if (!guest_name.equals("") && !guest_email.equals("") && !guest_phone.equals(""))
                 {
 //                    intent = new Intent(Form.this,EntryList.class);
@@ -89,7 +81,7 @@ public class Form extends AppCompatActivity {
 //                    intent.putExtra("guest_phone",guest_phone);
 //                    intent.putExtra("guest_check_in",guest_check_in);
 
-                    visitor=new Visitors(guest_name,guest_check_in,guest_phone,guest_email,"YES");
+                    visitor=new Visitors(guest_name,guest_check_in,guest_check_in_date,guest_phone,guest_email,"YES",host);
                     String subject = guest_name + " has made an entry to meet you";
                     message = "Name: "+guest_name+"\n\n"+
                             "Email: "+guest_email+"\n\n"+
@@ -103,9 +95,13 @@ public class Form extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                            long count = dataSnapshot.getChildrenCount();
+                            //long count = dataSnapshot.getChildrenCount();
 
-                            databaseReference.child(String.valueOf(count+1)).setValue(visitor);
+                            String id = ""+guest_name.charAt(0)+host.getName().charAt(0)+guest_phone.substring(4,10)+
+                                    host.getPhone().charAt(4)+guest_email.charAt(0)+host.getEmail().charAt(0)+
+                                    guest_check_in_date.substring(0,2)+guest_check_in.charAt(1);
+
+                            databaseReference.child(id).setValue(visitor);
                         }
 
                         @Override
@@ -144,6 +140,7 @@ public class Form extends AppCompatActivity {
             smsManager.sendTextMessage(host.getPhone(), null, "I have made an entry to meet you\n\n" +message, null, null);
 
             //startActivity(intent);
+            Toast.makeText(Form.this,"Checked in",Toast.LENGTH_LONG).show();
             finish();
             Log.d("test","msg1");
         }

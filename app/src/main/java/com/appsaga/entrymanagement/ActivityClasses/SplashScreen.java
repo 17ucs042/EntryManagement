@@ -1,4 +1,4 @@
-package com.appsaga.entrymanagement;
+package com.appsaga.entrymanagement.ActivityClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.appsaga.entrymanagement.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -24,10 +26,10 @@ public class SplashScreen extends AppCompatActivity {
 
         handler = new Handler();
 
-        logo = findViewById(R.id.logo);
+        //logo = findViewById(R.id.logo);
         welcome=findViewById(R.id.welcome);
 
-        Animation animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_in);
+        /*Animation animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_in);
         final Animation animZoomOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_out);
 
         logo.startAnimation(animZoomIn);
@@ -60,7 +62,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
 
-                startActivity(new Intent(SplashScreen.this,EntryList.class));
+                startActivity(new Intent(SplashScreen.this, EntryList.class));
                 finish();
             }
 
@@ -68,15 +70,15 @@ public class SplashScreen extends AppCompatActivity {
             public void onAnimationRepeat(Animation animation) {
 
             }
-        });
+        });*/
 
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//
-//                startActivity(new Intent(SplashScreen.this,MainActivity.class));
-//                finish();
-//            }
-//        },1500);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                startActivity(new Intent(SplashScreen.this,EntryList.class));
+                finish();
+            }
+        },1500);
     }
 }

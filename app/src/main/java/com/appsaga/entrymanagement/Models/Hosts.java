@@ -1,4 +1,4 @@
-package com.appsaga.entrymanagement;
+package com.appsaga.entrymanagement.Models;
 
 import java.io.Serializable;
 

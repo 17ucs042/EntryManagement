@@ -1,4 +1,4 @@
-package com.appsaga.entrymanagement;
+package com.appsaga.entrymanagement.ActivityClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.appsaga.entrymanagement.Models.Hosts;
+import com.appsaga.entrymanagement.R;
 
 public class HostDetails extends AppCompatActivity {
 
@@ -36,7 +39,7 @@ public class HostDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(HostDetails.this,Form.class);
+                Intent intent = new Intent(HostDetails.this, Form.class);
                 intent.putExtra("host",host);
                 startActivity(intent);
                 finish();

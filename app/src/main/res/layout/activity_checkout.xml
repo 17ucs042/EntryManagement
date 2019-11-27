@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Checkout"
+    tools:context=".ActivityClasses.Checkout"
     android:background="#FFF">
 
     <TextView
@@ -28,7 +28,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_below="@id/main_text"/>
+        android:layout_below="@id/main_text"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/guest_name"
@@ -84,7 +85,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_below="@id/guest_check_in"/>
+        android:layout_below="@id/guest_check_in"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/host_name"
@@ -125,9 +127,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="Checkout"
-        android:layout_marginBottom="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:background="@drawable/button_background"
         android:textColor="#FFF"/>
 

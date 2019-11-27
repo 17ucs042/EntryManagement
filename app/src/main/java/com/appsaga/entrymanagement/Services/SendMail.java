@@ -1,9 +1,10 @@
-package com.appsaga.entrymanagement;
+package com.appsaga.entrymanagement.Services;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.widget.Toast;
+
+import com.appsaga.entrymanagement.Services.Config;
 
 import java.util.Properties;
 

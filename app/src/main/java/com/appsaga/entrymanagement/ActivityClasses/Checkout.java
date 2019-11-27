@@ -1,4 +1,4 @@
-package com.appsaga.entrymanagement;
+package com.appsaga.entrymanagement.ActivityClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.appsaga.entrymanagement.Models.Hosts;
+import com.appsaga.entrymanagement.R;
+import com.appsaga.entrymanagement.Services.SendMail;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -18,10 +24,11 @@ public class Checkout extends AppCompatActivity {
     TextView guest_name,guest_phone,guest_email,guest_check_in;
     TextView host_name,host_phone,host_email;
     Hosts host;
-    String name,email,phone,check_in;
+    String name,email,phone,check_in,check_in_date;
     Button checkout,yes,no;
     private Dialog dialog;
     String message;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +40,13 @@ public class Checkout extends AppCompatActivity {
         email = getIntent().getStringExtra("guest_email");
         phone = getIntent().getStringExtra("guest_phone");
         check_in=getIntent().getStringExtra("guest_check_in");
+        check_in_date=getIntent().getStringExtra("guest_check_in_date");
+
+        String id = ""+name.charAt(0)+host.getName().charAt(0)+phone.substring(4,10)+
+                host.getPhone().charAt(4)+email.charAt(0)+host.getEmail().charAt(0)+
+                check_in_date.substring(0,2)+check_in.charAt(1);
+
+        databaseReference= FirebaseDatabase.getInstance().getReference("Visitors").child(id);
 
         guest_name=findViewById(R.id.guest_name);
         guest_phone=findViewById(R.id.guest_phone);
@@ -92,7 +106,7 @@ public class Checkout extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        dialog.show();
+        finish();
     }
 
     private void checkout()
@@ -111,6 +125,9 @@ public class Checkout extends AppCompatActivity {
 
         SendMail sendMail=new SendMail(Checkout.this,email,subject,message);
         sendMail.execute();
+
+        databaseReference.child("checkout").setValue(check_out);
+        databaseReference.child("ongoing").setValue("NO");
         finish();
     }
 }

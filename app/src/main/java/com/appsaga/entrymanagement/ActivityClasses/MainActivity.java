@@ -1,4 +1,4 @@
-package com.appsaga.entrymanagement;
+package com.appsaga.entrymanagement.ActivityClasses;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,12 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 
+import com.appsaga.entrymanagement.Adapters.HostsAdapter;
+import com.appsaga.entrymanagement.Models.Hosts;
+import com.appsaga.entrymanagement.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,24 +34,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       /* new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                try {
-                    GMailSender sender = new GMailSender("ayush.tdb@gmail.com", "+917615945222");
-                    sender.sendMail("This is Subject",
-                            "This is Body",
-                            "ayush.tdb@gmail.com",
-                            "mikkuayu@gmail.com");
-
-                    Log.d("test", "done");
-                } catch (Exception e) {
-                    Log.e("SendMail", e.getMessage(), e);
-                }
-            }
-        });*/
-
         hostsLists = findViewById(R.id.hosts_list);
         progressDialog=new ProgressDialog(MainActivity.this);
         progressDialog.setMessage("Loading");
@@ -67,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Hosts host = hosts.get(position);
-                Intent intent = new Intent(MainActivity.this,HostDetails.class);
+                Intent intent = new Intent(MainActivity.this, HostDetails.class);
                 intent.putExtra("host_details",host);
                 startActivity(intent);
                 finish();
