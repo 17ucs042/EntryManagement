@@ -116,7 +116,7 @@ If the visitor selects "yes" he/she is successfully checked-out. Also the detail
 
 The visitor then gets an email describing the details of the visit.
 
-
+![VisitorEmail](https://user-images.githubusercontent.com/32924261/69727831-45d39380-1149-11ea-89cf-ffe99f9f17bb.jpeg)
 
 Since the data of the visitor is to be preserved, therefore that data is stored in Firebase Realtime Database.
 
