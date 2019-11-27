@@ -14,30 +14,30 @@ Entry Management is a software biuld to manage the entries made by visitors to m
 
 ```
 |__Hosts
-			|__1
-				|__About
-				|__Department
-				|__Email
-				|__Name
-				|__Phone
-				|__Post
-			|__2
-				|__About
-				|__Department
-				|__Email
-				|__Name
-				|__Phone
-				|__Post
+	|__1
+	   |__About
+	   |__Department
+	   |__Email
+	   |__Name
+	   |__Phone
+	   |__Post
+	|__2
+	   |__About
+	   |__Department
+	   |__Email
+	   |__Name
+	   |__Phone
+	   |__Post
 |_Visitors
-			|__Generated ID
-									|__checkin
-									|__checkin-date
-									|__checkout
-									|__email
-									|__host_object
-									|__name
-									|__ongoing
-									|__phone
+	 |__Generated ID
+	 		|__checkin
+			|__checkin-date
+			|__checkout
+			|__email
+			|__host_object
+			|__name
+			|__ongoing
+			|__phone
 ```
 
 ## Application Flow
