@@ -68,4 +68,6 @@ Entry Management is a software biuld to manage the entries made by visitors to m
 
 
 ## Application Flow
-- When
+- When you open the application a splash screen appears
+
+![stack Overflow](http://lmsotfy.com/so.png)
