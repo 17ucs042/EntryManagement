@@ -72,7 +72,7 @@ public class Form extends AppCompatActivity {
                 SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd-MMM-yyyy");
                 guest_check_in_date =dateFormat1.format(date);
 
-                if (!guest_name.equals("") && !guest_email.equals("") && !guest_phone.equals(""))
+                if (!guest_name.equals("") && !guest_email.equals("") && !guest_phone.equals("") && guest_phone.length()>=10 && guest_phone.length()<=13)
                 {
 //                    intent = new Intent(Form.this,EntryList.class);
 //                    intent.putExtra("host",host);
