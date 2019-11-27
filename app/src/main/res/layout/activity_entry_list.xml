@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Make a new Entry"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/button_background"
+        android:background="@android:color/holo_blue_dark"
         android:textColor="#FFF"/>
 
 </RelativeLayout>

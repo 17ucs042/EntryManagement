@@ -12,8 +12,9 @@ public class Visitors implements Serializable {
     String Checkout;
     String Ongoing;
     Hosts Host;
+    String Token;
 
-    public Visitors(String name, String checkin,String checkin_date, String phone, String email,String on_going,Hosts host) {
+    public Visitors(String name, String checkin, String checkin_date, String phone, String email, String on_going, Hosts host, String token) {
         Name = name;
         Checkin = checkin;
         Phone = phone;
@@ -21,6 +22,7 @@ public class Visitors implements Serializable {
         Ongoing = on_going;
         Host=host;
         Checkin_Date=checkin_date;
+        Token = token;
     }
 
     /*public Visitors(String name, String checkin, String phone, String email, String checkout, String ongoing,Hosts host) {
@@ -101,4 +103,13 @@ public class Visitors implements Serializable {
     public void setCheckin_Date(String checkin_Date) {
         Checkin_Date = checkin_Date;
     }
+
+    public String getToken() {
+        return Token;
+    }
+
+    public void setToken(String token) {
+        Token = token;
+    }
+
 }

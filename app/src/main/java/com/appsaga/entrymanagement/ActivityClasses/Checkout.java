@@ -6,7 +6,9 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.appsaga.entrymanagement.Models.Hosts;
 import com.appsaga.entrymanagement.R;
@@ -24,11 +26,12 @@ public class Checkout extends AppCompatActivity {
     TextView guest_name,guest_phone,guest_email,guest_check_in;
     TextView host_name,host_phone,host_email;
     Hosts host;
-    String name,email,phone,check_in,check_in_date;
-    Button checkout,yes,no;
+    String name,email,phone,check_in,check_in_date,token;
+    Button checkout,confirm;
     private Dialog dialog;
     String message;
     DatabaseReference databaseReference;
+    EditText enterToken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,7 @@ public class Checkout extends AppCompatActivity {
         phone = getIntent().getStringExtra("guest_phone");
         check_in=getIntent().getStringExtra("guest_check_in");
         check_in_date=getIntent().getStringExtra("guest_check_in_date");
+        token=getIntent().getStringExtra("guest_token");
 
         String id = ""+name.charAt(0)+host.getName().charAt(0)+phone.substring(4,10)+
                 host.getPhone().charAt(4)+email.charAt(0)+host.getEmail().charAt(0)+
@@ -63,8 +67,8 @@ public class Checkout extends AppCompatActivity {
         dialog.setContentView(R.layout.checkout_dialog);
 
         checkout=findViewById(R.id.checkout);
-        yes = dialog.findViewById(R.id.btn_yes);
-        no = dialog.findViewById(R.id.btn_no);
+        confirm = dialog.findViewById(R.id.confirm);
+        enterToken=dialog.findViewById(R.id.enter_token);
 
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,21 +78,23 @@ public class Checkout extends AppCompatActivity {
             }
         });
 
-        yes.setOnClickListener(new View.OnClickListener() {
+        confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                checkout();
+                String entered_token = enterToken.getText().toString().trim();
+
+                if(token.equals(enterToken.getText().toString().trim()))
+                {
+                    checkout();
+                }
+                else
+                {
+                    Toast.makeText(Checkout.this,"Incorrect Token",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
-        no.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                dialog.dismiss();
-            }
-        });
     }
 
     private void fillDetails()
@@ -128,6 +134,8 @@ public class Checkout extends AppCompatActivity {
 
         databaseReference.child("checkout").setValue(check_out);
         databaseReference.child("ongoing").setValue("NO");
+
+        Toast.makeText(this, "Checked Out", Toast.LENGTH_SHORT).show();
         finish();
     }
 }

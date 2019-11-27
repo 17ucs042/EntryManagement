@@ -65,20 +65,25 @@ public class HostsList extends AppCompatActivity {
         });
     }
 
-    private void fillListView()
-    {
-        hosts=new ArrayList<>();
+    @Override
+    protected void onResume() {
+        super.onResume();
+        progressDialog.show();
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                hosts=new ArrayList<>();
                 for(DataSnapshot ds: dataSnapshot.getChildren())
                 {
                     hosts.add(ds.getValue(Hosts.class));
                 }
 
                 hostsAdapter = new HostsAdapter(HostsList.this,hosts);
+                hostsAdapter.notifyDataSetChanged();
 
+                hostsLists.setAdapter(null);
                 hostsLists.setAdapter(hostsAdapter);
 
                 progressDialog.dismiss();
@@ -86,15 +91,8 @@ public class HostsList extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                progressDialog.dismiss();
             }
         });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        fillListView();
-        progressDialog.show();
     }
 }

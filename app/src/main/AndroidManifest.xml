@@ -13,11 +13,14 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityClasses.AddHost"></activity>
-        <activity android:name=".ActivityClasses.EntryList" />
+        <activity android:name=".ActivityClasses.AddHost"
+            android:launchMode="singleInstance"></activity>
+        <activity android:name=".ActivityClasses.EntryList"
+            android:launchMode="singleInstance"/>
         <activity android:name=".ActivityClasses.Checkout" />
         <activity android:name=".ActivityClasses.Form" />
-        <activity android:name=".ActivityClasses.HostsList" />
+        <activity android:name=".ActivityClasses.HostsList"
+            android:launchMode="singleInstance"/>
         <activity
             android:name=".ActivityClasses.SplashScreen"
             android:launchMode="singleInstance">

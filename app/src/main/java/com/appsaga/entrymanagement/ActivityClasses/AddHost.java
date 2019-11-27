@@ -67,6 +67,7 @@ public class AddHost extends AppCompatActivity {
                     host = new Hosts(host_name, host_phone, host_email);
                     databaseReference.child((dataSnapshot.getChildrenCount()+1) + "").setValue(host);
                     progressDialog.dismiss();
+                    Toast.makeText(AddHost.this,"Host Added",Toast.LENGTH_LONG).show();
                     finish();
                 }
 

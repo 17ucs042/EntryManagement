@@ -77,6 +77,7 @@ public class EntryList extends AppCompatActivity {
                 String phone = visitors.get(position).getPhone();
                 String check_in = visitors.get(position).getCheckin();
                 String check_in_date = visitors.get(position).getCheckin_Date();
+                String token = visitors.get(position).getToken();
 
                 Intent intent = new Intent(EntryList.this, Checkout.class);
                 intent.putExtra("host",host);
@@ -85,6 +86,7 @@ public class EntryList extends AppCompatActivity {
                 intent.putExtra("guest_email",email);
                 intent.putExtra("guest_phone",phone);
                 intent.putExtra("guest_check_in_date",check_in_date);
+                intent.putExtra("guest_token",token);
 
                 startActivity(intent);
             }
@@ -127,6 +129,7 @@ public class EntryList extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                progressDialog.dismiss();
             }
         });
 
