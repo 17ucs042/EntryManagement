@@ -15,19 +15,13 @@ Entry Management is a software biuld to manage the entries made by visitors to m
 ```
 |__Hosts
 	|__1
-	   |__About
-	   |__Department
 	   |__Email
 	   |__Name
 	   |__Phone
-	   |__Post
 	|__2
-	   |__About
-	   |__Department
 	   |__Email
 	   |__Name
 	   |__Phone
-	   |__Post
 |_Visitors
 	 |__Generated ID
 	 		|__checkin
@@ -38,6 +32,7 @@ Entry Management is a software biuld to manage the entries made by visitors to m
 			|__name
 			|__ongoing
 			|__phone
+			|__token
 ```
 ## Approach
 I have thought of this software as a simple entry management done at the gate entry. The current way to make entry is to write your and the host details in a register while making an entry and siging that entry with your signature. I have tried to bring the same process in an application on which the visitor can easily make an entry. 
@@ -51,40 +46,44 @@ I have thought of this software as a simple entry management done at the gate en
 
  ![EmptyEntryList](https://user-images.githubusercontent.com/32924261/69726096-c4c6cd00-1145-11ea-901b-f7bab88184db.jpg)
 
-Clicking on "make a new entry" button will display a list of hosts available at the department and whom the visitor can meet. 
+- Clicking on "make a new entry" button will display a list of hosts available at the department and whom the visitor can meet. 
 
-![HostsList](https://user-images.githubusercontent.com/32924261/69726440-9ac1da80-1146-11ea-9580-6b9763c0a09e.jpg)
+![HostsList](https://user-images.githubusercontent.com/32924261/69756506-b1852300-1180-11ea-91ea-9099d47ff448.jpg)
 
-The visitor can select one of the hosts he/she wants to meets. When a host is selected a page is displayed showing the details of the host.
+- The visitor can select one of the hosts he/she wants to meets. You can also add a host by clicking the plus button at the bottom right corner of the screen. A form appears asking the details of the host to be added.
 
-![HostDetails](https://user-images.githubusercontent.com/32924261/69726577-dbb9ef00-1146-11ea-9fd1-bc933fd08a23.jpg)
+![HostForm](https://user-images.githubusercontent.com/32924261/69756504-b0ec8c80-1180-11ea-805b-40602e6fa4f0.jpg)
 
-After confirming the details of the host which the visitor wants to meet he/she presses the "Continue" button and a form is displayed.
+- Click on add host button after filling the form. The page closes and the updated list of hosts is again displayed.
+- When the visitor selects a host of his/her choice then he/she is asked to fill a form.
 
 ![Form](https://user-images.githubusercontent.com/32924261/69726609-e83e4780-1146-11ea-93c6-fa55c481362b.jpg)
 
-After filling in his/her details the visitor presses the "Check-in" button. Doing this the user check-in entry is completed.
-The entry list page again opens after this with the details of the checked-in user.
+- After filling in his/her details the visitor presses the "Check-in" button. Doing this the user check-in entry is completed and a token is mailed to the visitor as well.
+
+![Token](https://user-images.githubusercontent.com/32924261/69756508-b1852300-1180-11ea-9b3a-f11508a3fdc5.jpg)
+
+-  After clicking "ok" button, the entry list page again opens with the details of the checked-in user.
 
 ![FilledEntryList](https://user-images.githubusercontent.com/32924261/69726607-e83e4780-1146-11ea-9e0b-32a47e34a7e9.jpg)
 
-The host receives an email as well as the message describing the details of the visitor. Image of the mail is attached.
+- The host receives an email as well as the message describing the details of the visitor. Image of the mail is attached.
 
 ![HostMail](https://user-images.githubusercontent.com/32924261/69726611-e83e4780-1146-11ea-8b7d-4808cdc406f6.jpg)
 
-After the visit is done the visitor selects his/her details from the list. When the item on the entry lis is clicked a page appears showing the visit details as well as an option to checkout.
+- After the visit is done the visitor selects his/her details from the list. When the item on the entry lis is clicked a page appears showing the visit details as well as an option to checkout.
 
 ![CheckinDetails](https://user-images.githubusercontent.com/32924261/69726605-e7a5b100-1146-11ea-943c-5e1a400c8115.jpg)
 
-When the "checkout" button is pressed the visitor is asked to confirm the checkout.
+- When the "checkout" button is pressed the visitor is asked to confirm the checkout after entering the provided token.
 
-![ConfirmCheckout](https://user-images.githubusercontent.com/32924261/69726606-e7a5b100-1146-11ea-8e94-5dbe58cdcea6.jpg)
+![EnterToken](https://user-images.githubusercontent.com/32924261/69756499-b053f600-1180-11ea-9ec8-c0aa318392de.jpg)
 
-If the visitor selects "yes" he/she is successfully checked-out. Also the details of that visitor is removed from that list. The update d list is shown.
+- If the visitor enters right token then he/she is successfully checked-out. Also the details of that visitor is removed from that list. The updated list is shown herewith.
 
 ![EmptyEntryList](https://user-images.githubusercontent.com/32924261/69726096-c4c6cd00-1145-11ea-901b-f7bab88184db.jpg)
 
-The visitor then gets an email describing the details of the visit.
+- The visitor then gets an email describing the details of the visit.
 
 ![VisitorEmail](https://user-images.githubusercontent.com/32924261/69727831-45d39380-1149-11ea-89cf-ffe99f9f17bb.jpeg)
 
