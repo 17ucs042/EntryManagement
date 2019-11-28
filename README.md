@@ -40,7 +40,7 @@ I have thought of this software as a simple entry management done at the gate en
 ## Application Flow
 - When you open the application a splash screen appears
 
-![SplashScreen](https://user-images.githubusercontent.com/32924261/69790676-e62cc500-11e8-11ea-8d8a-6d92695bdd1c.jpg)
+![SplashScreen](https://user-images.githubusercontent.com/32924261/69790745-08264780-11e9-11ea-9ea2-4583939eb658.jpg)
 
 - After a moment the splash finishes and a list of  current entries made appears. If no current entries are made a list empty message is displayed.
 
