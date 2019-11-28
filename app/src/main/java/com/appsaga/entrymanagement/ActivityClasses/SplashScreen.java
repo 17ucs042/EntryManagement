@@ -26,52 +26,6 @@ public class SplashScreen extends AppCompatActivity {
 
         handler = new Handler();
 
-        //logo = findViewById(R.id.logo);
-        welcome=findViewById(R.id.welcome);
-
-        /*Animation animZoomIn = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_in);
-        final Animation animZoomOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_out);
-
-        logo.startAnimation(animZoomIn);
-
-        animZoomIn.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-
-                welcome.setVisibility(View.GONE);
-                logo.startAnimation(animZoomOut);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-
-        animZoomOut.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-
-                startActivity(new Intent(SplashScreen.this, EntryList.class));
-                finish();
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });*/
-
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -79,6 +33,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(new Intent(SplashScreen.this,EntryList.class));
                 finish();
             }
-        },1500);
+        },2000);
     }
 }
