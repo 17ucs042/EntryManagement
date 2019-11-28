@@ -73,11 +73,11 @@ I have thought of this software as a simple entry management done at the gate en
 
 - After the visit is done the visitor selects his/her details from the list. When the item on the entry lis is clicked a page appears showing the visit details as well as an option to checkout.
 
-![VisitDetails](https://user-images.githubusercontent.com/32924261/69780396-27b17600-11d1-11ea-83b7-109e31f0e99b.jpg)
+![CheckinDetails](https://user-images.githubusercontent.com/32924261/69785192-85e45600-11dd-11ea-950b-aa5afaabe025.jpg)
 
 - When the "checkout" button is pressed the visitor is asked to confirm the checkout after entering the provided token.
 
-![EnterToken](https://user-images.githubusercontent.com/32924261/69780387-26804900-11d1-11ea-93b9-4ba336c90f9e.jpg)
+![EnterToken](https://user-images.githubusercontent.com/32924261/69785193-867cec80-11dd-11ea-997e-baf8eaa1c4ef.jpg)
 
 - If the visitor enters right token then he/she is successfully checked-out. Also the details of that visitor is removed from that list. The updated list is shown herewith.
 
