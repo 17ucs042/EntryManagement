@@ -40,32 +40,32 @@ I have thought of this software as a simple entry management done at the gate en
 ## Application Flow
 - When you open the application a splash screen appears
 
-![SplashScreen](https://user-images.githubusercontent.com/32924261/69726175-fa6bb600-1145-11ea-82ea-91e708341e70.jpg)
+![SplashScreen](https://user-images.githubusercontent.com/32924261/69780393-27b17600-11d1-11ea-812d-b1ff244b4dee.jpg)
 
 - After a moment the splash finishes and a list of  current entries made appears. If no current entries are made a list empty message is displayed.
 
- ![EmptyEntryList](https://user-images.githubusercontent.com/32924261/69726096-c4c6cd00-1145-11ea-901b-f7bab88184db.jpg)
+![EmptyEntryList](https://user-images.githubusercontent.com/32924261/69780386-26804900-11d1-11ea-85c7-6b74e3379cc1.jpg)
 
 - Clicking on "make a new entry" button will display a list of hosts available at the department and whom the visitor can meet. 
 
-![HostsList](https://user-images.githubusercontent.com/32924261/69756506-b1852300-1180-11ea-91ea-9099d47ff448.jpg)
+![HostsList](https://user-images.githubusercontent.com/32924261/69780392-2718df80-11d1-11ea-8c93-504c068e9841.jpg)
 
 - The visitor can select one of the hosts he/she wants to meets. You can also add a host by clicking the plus button at the bottom right corner of the screen. A form appears asking the details of the host to be added.
 
-![HostForm](https://user-images.githubusercontent.com/32924261/69756504-b0ec8c80-1180-11ea-805b-40602e6fa4f0.jpg)
+![HostForm](https://user-images.githubusercontent.com/32924261/69780390-2718df80-11d1-11ea-9e4d-3b83ec06431d.jpg)
 
 - Click on add host button after filling the form. The page closes and the updated list of hosts is again displayed.
 - When the visitor selects a host of his/her choice then he/she is asked to fill a form.
 
-![Form](https://user-images.githubusercontent.com/32924261/69726609-e83e4780-1146-11ea-93c6-fa55c481362b.jpg)
+![VisitorForm](https://user-images.githubusercontent.com/32924261/69780398-284a0c80-11d1-11ea-8b37-56e29fb9e02f.jpg)
 
 - After filling in his/her details the visitor presses the "Check-in" button. Doing this the user check-in entry is completed and a token is mailed to the visitor as well.
 
-![Token](https://user-images.githubusercontent.com/32924261/69756508-b1852300-1180-11ea-9b3a-f11508a3fdc5.jpg)
+![Token](https://user-images.githubusercontent.com/32924261/69780394-27b17600-11d1-11ea-8eda-15c8be99f118.jpg)
 
 -  After clicking "ok" button, the entry list page again opens with the details of the checked-in user.
 
-![FilledEntryList](https://user-images.githubusercontent.com/32924261/69726607-e83e4780-1146-11ea-9e0b-32a47e34a7e9.jpg)
+![FilledEntryList](https://user-images.githubusercontent.com/32924261/69780389-2718df80-11d1-11ea-813d-aed0bb1b4007.jpg)
 
 - The host receives an email as well as the message describing the details of the visitor. Image of the mail is attached.
 
@@ -73,15 +73,15 @@ I have thought of this software as a simple entry management done at the gate en
 
 - After the visit is done the visitor selects his/her details from the list. When the item on the entry lis is clicked a page appears showing the visit details as well as an option to checkout.
 
-![CheckinDetails](https://user-images.githubusercontent.com/32924261/69726605-e7a5b100-1146-11ea-943c-5e1a400c8115.jpg)
+![VisitDetails](https://user-images.githubusercontent.com/32924261/69780396-27b17600-11d1-11ea-83b7-109e31f0e99b.jpg)
 
 - When the "checkout" button is pressed the visitor is asked to confirm the checkout after entering the provided token.
 
-![EnterToken](https://user-images.githubusercontent.com/32924261/69756499-b053f600-1180-11ea-9ec8-c0aa318392de.jpg)
+![EnterToken](https://user-images.githubusercontent.com/32924261/69780387-26804900-11d1-11ea-93b9-4ba336c90f9e.jpg)
 
 - If the visitor enters right token then he/she is successfully checked-out. Also the details of that visitor is removed from that list. The updated list is shown herewith.
 
-![EmptyEntryList](https://user-images.githubusercontent.com/32924261/69726096-c4c6cd00-1145-11ea-901b-f7bab88184db.jpg)
+![EmptyEntryList](https://user-images.githubusercontent.com/32924261/69780386-26804900-11d1-11ea-85c7-6b74e3379cc1.jpg)
 
 - The visitor then gets an email describing the details of the visit.
 
