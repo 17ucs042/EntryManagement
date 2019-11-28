@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityClasses.SplashScreen"
-    android:background="@android:color/holo_blue_dark">
+    android:background="#2F80ED">
 
     <ImageView
         android:id="@+id/logo"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/edited_logo"
+        android:src="@drawable/splash_logo"
         android:layout_marginEnd="80dp"
         android:layout_marginStart="80dp"/>
 
