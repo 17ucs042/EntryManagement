@@ -142,7 +142,7 @@ public class Form extends AppCompatActivity {
             public void onClick(View v) {
 
                 sendSMSMessage();
-                Toast.makeText(Form.this,"Checked in",Toast.LENGTH_LONG).show();
+                Toast.makeText(Form.this,"Checked in",Toast.LENGTH_SHORT).show();
             }
         });
     }

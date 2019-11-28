@@ -82,8 +82,6 @@ public class Checkout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String entered_token = enterToken.getText().toString().trim();
-
                 if(token.equals(enterToken.getText().toString().trim()))
                 {
                     checkout();
@@ -136,6 +134,7 @@ public class Checkout extends AppCompatActivity {
         databaseReference.child("ongoing").setValue("NO");
 
         Toast.makeText(this, "Checked Out", Toast.LENGTH_SHORT).show();
+        dialog.dismiss();
         finish();
     }
 }
