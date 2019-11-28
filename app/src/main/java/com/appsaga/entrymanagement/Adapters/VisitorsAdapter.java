@@ -42,28 +42,11 @@ public class VisitorsAdapter extends ArrayAdapter<Visitors> {
         TextView email = ongoing_visitors_view.findViewById(R.id.email);
         TextView contact = ongoing_visitors_view.findViewById(R.id.contact);
         TextView check_in = ongoing_visitors_view.findViewById(R.id.check_in);
-        TextView name_icon = ongoing_visitors_view.findViewById(R.id.name_icon);
 
         name.setText(visitor.getName());
         email.setText(visitor.getEmail());
         contact.setText(visitor.getPhone());
-        check_in.setText(visitor.getCheckin_Date()+"  "+visitor.getCheckin());
-        name_icon.setText(visitor.getName().toUpperCase().charAt(0)+"");
-
-        if(position%3==0)
-        {
-            GradientDrawable back = (GradientDrawable)name_icon.getBackground();
-            back.setColor(Color.RED);
-        }
-        else if(position%3==1)
-        {
-            GradientDrawable back = (GradientDrawable)name_icon.getBackground();
-            back.setColor(Color.BLUE);
-        }
-        else {
-            GradientDrawable back = (GradientDrawable)name_icon.getBackground();
-            back.setColor(Color.GREEN);
-        }
+        check_in.setText(visitor.getCheckin_Date()+"\n"+visitor.getCheckin());
 
         return ongoing_visitors_view;
     }

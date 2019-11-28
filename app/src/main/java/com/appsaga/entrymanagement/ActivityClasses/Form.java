@@ -82,7 +82,7 @@ public class Form extends AppCompatActivity {
                 guest_phone = phone.getText().toString();
 
                 Date date = Calendar.getInstance().getTime();
-                DateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
+                DateFormat dateFormat = new SimpleDateFormat("hh:mm:ss a");
                 guest_check_in = dateFormat.format(date);
 
                 SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd-MMM-yyyy");

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityClasses.EntryList"
-    android:background="#FFF">
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/no_entry"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:textSize="25sp"
-        android:textColor="#000"
+        android:textColor="#FFF"
         android:text="No Entries Currently"/>
 
     <TextView
@@ -23,8 +23,8 @@
         android:text="Current Entries"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:textColor="#000"
+        android:layout_marginTop="50dp"
+        android:textColor="#FFF"
         android:textSize="30sp"/>
 
     <ListView
@@ -36,7 +36,8 @@
         android:visibility="gone"
         android:layout_below="@id/entry_text"
         android:layout_marginTop="40dp"
-        android:divider="@android:color/transparent"/>
+        android:divider="@android:color/transparent"
+        android:paddingBottom="15dp"/>
 
     <Button
         android:id="@+id/make_entry"
