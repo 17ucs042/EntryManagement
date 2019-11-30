@@ -1,4 +1,4 @@
-# EasyEntry
+# Easy Entry
 ## App for Innovacer SummerGeeks 2020
 
 ## Intrdouction
