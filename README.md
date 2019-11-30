@@ -65,7 +65,7 @@ I have thought of this software as a simple entry management done at the gate en
 
 -  After clicking "ok" button, the entry list page again opens with the details of the checked-in user.
 
-![FilledEntryList](https://user-images.githubusercontent.com/32924261/69780389-2718df80-11d1-11ea-813d-aed0bb1b4007.jpg)
+![FilledEntryList](https://user-images.githubusercontent.com/32924261/69895688-d503c580-135a-11ea-8598-d45da30ef61e.jpg)
 
 - The host receives an email as well as the message describing the details of the visitor. Image of the mail is attached.
 
@@ -73,11 +73,11 @@ I have thought of this software as a simple entry management done at the gate en
 
 - After the visit is done the visitor selects his/her details from the list. When the item on the entry lis is clicked a page appears showing the visit details as well as an option to checkout.
 
-![CheckinDetails](https://user-images.githubusercontent.com/32924261/69785192-85e45600-11dd-11ea-950b-aa5afaabe025.jpg)
+![CheckinDetails](https://user-images.githubusercontent.com/32924261/69895686-d46b2f00-135a-11ea-9b39-1dcc9d17c137.jpg)
 
 - When the "checkout" button is pressed the visitor is asked to confirm the checkout after entering the provided token.
 
-![EnterToken](https://user-images.githubusercontent.com/32924261/69785193-867cec80-11dd-11ea-997e-baf8eaa1c4ef.jpg)
+![EnterToken](https://user-images.githubusercontent.com/32924261/69895687-d46b2f00-135a-11ea-8864-22714a5f9c09.jpg)
 
 - If the visitor enters right token then he/she is successfully checked-out. Also the details of that visitor is removed from that list. The updated list is shown herewith.
 
