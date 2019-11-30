@@ -65,7 +65,7 @@ I have thought of this software as a simple entry management done at the gate en
 
 -  After clicking "ok" button, the entry list page again opens with the details of the checked-in user.
 
-![FilledEntryList](https://user-images.githubusercontent.com/32924261/69895688-d503c580-135a-11ea-8598-d45da30ef61e.jpg)
+![FilledEntryList](https://user-images.githubusercontent.com/32924261/69895719-4f344a00-135b-11ea-811b-95a6de62003d.jpg)
 
 - The host receives an email as well as the message describing the details of the visitor. Image of the mail is attached.
 
