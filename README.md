@@ -61,7 +61,7 @@ I have thought of this software as a simple entry management done at the gate en
 
 - After filling in his/her details the visitor presses the "Check-in" button. Doing this the user check-in entry is completed and a token is mailed to the visitor as well.
 
-![Token](https://user-images.githubusercontent.com/32924261/69780394-27b17600-11d1-11ea-8eda-15c8be99f118.jpg)
+![Token](https://user-images.githubusercontent.com/32924261/69895773-eb5e5100-135b-11ea-8017-9b88effa2df4.jpg)
 
 -  After clicking "ok" button, the entry list page again opens with the details of the checked-in user.
 
@@ -77,7 +77,7 @@ I have thought of this software as a simple entry management done at the gate en
 
 - When the "checkout" button is pressed the visitor is asked to confirm the checkout after entering the provided token.
 
-![EnterToken](https://user-images.githubusercontent.com/32924261/69895687-d46b2f00-135a-11ea-8864-22714a5f9c09.jpg)
+![EnterToken](https://user-images.githubusercontent.com/32924261/69895772-eb5e5100-135b-11ea-8a3a-e8be4a095bc0.jpg)
 
 - If the visitor enters right token then he/she is successfully checked-out. Also the details of that visitor is removed from that list. The updated list is shown herewith.
 
